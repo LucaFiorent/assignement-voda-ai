@@ -1,0 +1,46 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tailwindcss";
+@custom-variant light (&:where(.light, .light *));
+
+:root {
+  @apply bg-gray-700 text-white;
+}
+.light {
+  @apply bg-white text-gray-800;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  margin-inline: auto;
+}
+
+body {
+  @apply sm:w-md md:w-lg lg:w-4xl;
+}
+body img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
